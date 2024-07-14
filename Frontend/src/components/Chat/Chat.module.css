@@ -1,0 +1,147 @@
+.chatContainer {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  width: 100%;
+  background-color: var(--bg-content);
+}
+
+.chatHistory {
+  flex-grow: 1;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  padding-bottom: 200px; /* Adjust based on your input area height */
+}
+
+.chatEntry {
+  margin-bottom: 1rem;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.userMessage {
+  text-align: right;
+  color: var(--accent-color);
+}
+
+.botMessage {
+  text-align: left;
+  color: var(--text-primary);
+}
+
+.noChatMessage {
+  text-align: center;
+  color: var(--text-secondary);
+  margin-top: auto;
+}
+
+.inputArea {
+  position: fixed;
+  bottom: 0;
+  left: var(--nav-width); /* Adjust based on your navbar width */
+  right: 0;
+  border-top: 1px solid var(--text-secondary);
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  z-index: 10;
+}
+
+.form {
+  display: flex;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.input {
+  flex-grow: 1;
+  padding: 0.75rem;
+  font-size: 1rem;
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  border: 1px solid var(--text-secondary);
+  border-radius: 4px;
+  margin: 0 10px;
+}
+
+.iconButton {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: var(--accent-color);
+  transition: color var(--transition-speed);
+  padding: 0.5rem;
+}
+
+.iconButton:hover {
+  color: #535bf2;
+}
+
+.iconButton:disabled {
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.clearButton {
+  background: none;
+  border: none;
+  font-size: 1.2rem;
+  cursor: pointer;
+  color: var(--text-secondary);
+  transition: color var(--transition-speed);
+  padding: 0.5rem;
+  display: block;
+  margin: 0 auto;
+}
+
+.clearButton:hover {
+  color: #ff4d4d;
+}
+
+.clearButton:disabled {
+  color: var(--text-secondary);
+  cursor: not-allowed;
+}
+
+.error {
+  color: #ff4d4d;
+  margin-top: 0.5rem;
+}
+
+.loading {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--text-secondary);
+  border-radius: 50%;
+  border-top-color: var(--accent-color);
+  animation: spin 1s ease-in-out infinite;
+  margin-left: 10px;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.botMessage ul, .botMessage ol {
+  padding-left: 20px;
+  margin: 10px 0;
+}
+
+.botMessage li {
+  margin-bottom: 5px;
+}
+
+.botMessage p {
+  margin-bottom: 10px;
+}
+
+.botMessage strong {
+  font-weight: bold;
+}
+
+
+/* Adjust other existing styles as needed */

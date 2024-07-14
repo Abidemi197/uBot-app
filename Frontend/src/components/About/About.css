@@ -1,0 +1,39 @@
+/* src/components/About/About.css */
+
+.about-container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+  }
+  
+  h1, h2 {
+    color: #dbd9d9;
+  }
+  
+  section {
+    margin-bottom: 30px;
+  }
+  
+  ul, ol {
+    margin-left: 20px;
+  }
+  
+  li {
+    margin-bottom: 10px;
+  }
+  
+  .creator-info ul {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .creator-info a {
+    color: #0077b5;
+    text-decoration: none;
+  }
+  
+  .creator-info a:hover {
+    text-decoration: underline;
+  }

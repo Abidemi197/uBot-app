@@ -1,0 +1,85 @@
+:root {
+    --bg-primary: #121212;
+    --bg-secondary: #1e1e1e;
+    --text-primary: #ffffff;
+    --text-secondary: #b3b3b3;
+    --accent-color: #646cff;
+    --transition-speed: 0.3s;
+    --nav-width: 200px;
+  }
+  
+  .app {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+  }
+  
+  .appContent {
+    display: flex;
+    flex-grow: 1;
+  }
+  
+  .nav {
+    background-color: var(--bg-secondary);
+    width: var(--nav-width);
+    padding: 1rem;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 0;
+  }
+  
+  .navList {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .navItem {
+    margin-bottom: 1rem;
+    width: 100%;
+  }
+  
+  .navLink {
+    color: var(--text-secondary);
+    text-decoration: none;
+    font-size: 1rem;
+    transition: color var(--transition-speed);
+    display: block;
+    padding: 0.5rem 0;
+  }
+  
+  .navLink:hover, .activeLink {
+    color: var(--accent-color);
+  }
+  
+  .logoutButton {
+    background-color: transparent;
+    border: 1px solid var(--text-secondary);
+    color: var(--text-secondary);
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all var(--transition-speed);
+    border-radius: 4px;
+    width: 100%;
+    text-align: left;
+  }
+  
+  .logoutButton:hover {
+    background-color: var(--accent-color);
+    border-color: var(--accent-color);
+    color: var(--text-primary);
+  }
+  
+  .content {
+    flex-grow: 1;
+    padding: 2rem;
+    margin-left: var(--nav-width);
+    width: calc(100% - var(--nav-width));
+    box-sizing: border-box;
+  }
